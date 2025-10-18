@@ -125,12 +125,15 @@ p {
 .project1 {
     margin-top: 50px;
     margin-bottom: 50px;
-    width: 450px;
+    max-width: 450px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s;
 }
 
 .project1:hover {
-    width: 430px;
-    transition: 0.3s;
+    transform: scale(1.05);
 }
 
 .skip-1 {
@@ -258,7 +261,9 @@ form {
 .name,
 .email,
 .message {
-    width: 500px;
+    max-width: 500px;
+    width: 90%;
+    box-sizing: border-box;
     resize: none;
     border: none;
     color: inherit;
