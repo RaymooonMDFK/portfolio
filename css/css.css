@@ -285,3 +285,84 @@ form {
     background-color: #e11d48;
     color: #121212;
 }
+
+/* --- INICIO DE ESTILOS RESPONSIVOS --- */
+
+/* Para tablets y móviles grandes (menos de 768px) */
+@media (max-width: 768px) {
+    
+    /* 1. Proyectos (para que la imagen y el texto se apilen) */
+    .project-item {
+        flex-direction: column; /* Apila la imagen y la info */
+        text-align: center;
+    }
+    .project-info {
+        padding: 25px;
+    }
+
+    /* 2. Barra de navegación (para centrarla) */
+    .bar-navegation ul {
+        justify-content: center; /* Centra los links de nav */
+    }
+
+    /* 3. Skills (para que se envuelvan) */
+    .skills_row {
+        flex-wrap: wrap; /* Permite que los skills bajen a la siguiente línea */
+    }
+}
+
+/* Para móviles (menos de 600px) */
+@media (max-width: 600px) {
+
+    /* 1. Fuentes (reducir tamaños grandes) */
+    .heading {
+        font-size: 36px; /* Reduce el tamaño de fuente principal */
+    }
+    h2, .photo-profile {
+        font-size: 28px; /* Reduce subtítulos */
+    }
+    .skip-1 h2, .skip-2 h2, .skip-3 h2 {
+        font-size: 32px; /* Reduce fuentes de sección */
+    }
+
+    /* 2. Párrafos (para que no se peguen a los bordes) */
+    p {
+        max-width: 100%;
+        padding: 0 15px; /* Añade padding lateral */
+        box-sizing: border-box; /* Importante para que el padding no sume al ancho */
+    }
+
+    /* 3. Arreglos CRÍTICOS de Layout */
+
+    /* Proyecto individual */
+    .project1 {
+        width: 90%; /* Quita el ancho fijo */
+    }
+    .project1:hover {
+        width: 88%; /* Ajusta el hover */
+    }
+
+    /* Formulario de contacto (MUY IMPORTANTE) */
+    .name,
+    .email,
+    .message {
+        width: 90%; /* Quita el ancho fijo de 500px */
+    }
+
+    .btn {
+        margin-left: 0; /* Resetea el margen problemático */
+        width: 90%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    /* 4. Navegación (para que se apile verticalmente) */
+    .bar-navegation ul {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .bar-navegation a {
+        padding: 10px 0; /* Ajusta el padding vertical */
+    }
+}
+/* --- FIN DE ESTILOS RESPONSIVOS --- */
