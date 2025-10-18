@@ -17,8 +17,8 @@
         <div class="heading_line-2">
             <p>Soy un aprendiz de desarrollo web.</p>
         </div>
-        <div class="contenido">
-            <a href="#about" id="skip-1">ver mi portafolio</a>
+        <div class="content_button">
+            <a href="#skip-1" id="home" class="view-content-button">ver mi portafolio</a>
         </div>
     </div>
 
@@ -33,61 +33,80 @@
                 </ul>
             </nav>
         </div>
-        <section id="skip-1">
+        <section id="skip-1" class="skip-1">
             <h2>Acerca de mi</h2>
             <div class="img-container">
                 <figure class="photo-profile">
-                    <img src="img/goat.png" alt="Foto de perfil">
+                    <img src="img/nubini.png" alt="Foto de perfil" width="100px">
                 </figure>
             </div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus molestiae, labore earum reprehenderit
-                autem natus vel repudiandae assumenda maxime! Dolor vitae veniam ipsa non tempora earum deserunt
-                mollitia recusandae quo.</p>
+            <p>Totalmente comprometido con la filosofía del aprendizaje autodidacta, soy un desarrollador principiante
+                con una profunda pasión por todo lo relacionado con el desarrollo web. La combinación única de
+                creatividad, lógica, tecnología y la constante búsqueda de nuevas cosas por descubrir impulsa mi
+                entusiasmo y pasión por el desarrollo web. Cuando no estoy frente al ordenador, me gusta dedicar mi
+                tiempo a leer, mantenerme en forma y aprender.</p>
             <div class="skills">
                 <div class="skills_row">
                     <div class="skill_item skill_item-html">
-                        <img src="img/html.png" alt="HTML5">
+                        <img src="img/html.png" alt="HTML5" class="img-item">
                         <div class="skills_item-name">HTML</div>
                     </div>
                     <div class="skill_item skill_item-css">
-                        <img src="img/css.png" alt="CSS3">
+                        <img src="img/css.png" alt="CSS3" class="img-item">
                         <div class="skills_item-name">CSS</div>
                     </div>
                 </div>
                 <div class="skills_row">
                     <div class="skill_item skill_item-java">
-                        <img src="img/java.png" alt="JAVA">
+                        <img src="img/java.png" alt="JAVA" class="img-item">
                         <div class="skills_item-name">JAVA</div>
                     </div>
                     <div class="skill_item skill_item-js">
-                        <img src="img/js.png" alt="JavaScript">
+                        <img src="img/js.png" alt="JavaScript" class="img-item">
                         <div class="skills_item-name">JavaScript</div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="skip-2">
+        <section id="skip-2" class="skip-2">
             <h2>Proyectos</h2>
             <div class="projects-container">
+
                 <div class="project-item">
-                    <img src="img/project1.png" alt="Proyecto 1">
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción breve del proyecto 1.</p>
+                    <div class="project-image">
+                        <img src="img/project1.jpg" alt="Proyecto 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Tabla periodica en linea</h3>
+                        <p>Tabla periodica de los elementos en linea con su respectiva simbologia.</p>
+                        <div class="project-links">
+                            <a href="#">Ver Online</a>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="project-item">
-                    <img src="img/project2.png" alt="Proyecto 2">
-                    <h3>Proyecto 2</h3>
-                    <p>Descripción breve del proyecto 2.</p>
+                    <div class="project-image">
+                        <img src="img/project2.jpg" alt="Proyecto 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Sitio web de una pizzeria falsa</h3>
+                        <p>Un sitio web de una pizzeria falsa para otro proyecto en java.</p>
+                        <div class="project-links">
+                            <a href="#">ver Online</a>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </section>
-        <section id="skip-3">
+        <section id="skip-3" class="skip-3">
             <h2>Contacto</h2>
             <form action="https://formsubmit.co/hectorrmedranoj@gmail.com" method="POST">
 
-                <input type="text" name="name" placeholder="Name">
-                <input type="email" name="email" placeholder="Email">
-                <textarea name="message" id="message" placeholder="Message"></textarea>
+                <input type="text" name="name" placeholder="Name" class="name">
+                <input type="email" name="email" placeholder="Email" class="email">
+                <textarea name="message" id="message" placeholder="Message" class="message"></textarea>
                 <input type="submit" value="SUBMIT" class="btn">
             </form>
         </section>
@@ -95,11 +114,11 @@
 
     <footer>
         <div class="social">
-            <a href="https://github.com/RaymooonMDFK">
-                <img src="img/github-logo.png" alt="">
+            <a href="https://github.com/RaymooonMDFK" class="github-item-link">
+                <img src="img/github-logo.png" alt="" class="github-item">
             </a>
             <a href="mailto:hectorrmedrano@gmail.com">
-                <img src="img/mail.png" alt="">
+                <img src="img/mail.png" alt="" class="email-item">
             </a>
         </div>
         <p>Hector Medrano @2025</p>
