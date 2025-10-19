@@ -109,7 +109,8 @@ p {
 
 /* Sección "About Me" y "Skills" (Contenido de .skip-1) */
 .photo-profile,
-h2 { /* Nota: Esta regla general afecta a TODOS los h2 */
+h2 {
+    /* Nota: Esta regla general afecta a TODOS los h2 */
     text-align: center;
     font-size: 36px;
     margin-top: 40px;
@@ -144,7 +145,8 @@ h2 { /* Nota: Esta regla general afecta a TODOS los h2 */
 .project-item {
     display: flex;
     align-items: center;
-    background-color: #4a00e0; /* Considera cambiar este color si no encaja */
+    background-color: #4a00e0;
+    /* Considera cambiar este color si no encaja */
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 40px;
@@ -300,9 +302,8 @@ footer {
     .skip-2 h2,
     .skip-3 h2 {
         font-size: 38px;
-        text-align: center; 
+        text-align: center;
     }
-
 
     .project-item {
         flex-direction: column;
@@ -310,7 +311,7 @@ footer {
 
     .project-info {
         padding: 30px;
-        text-align: center; 
+        text-align: center;
     }
 
     .project-links {
@@ -320,7 +321,7 @@ footer {
     }
 
     .project-links a {
-        margin-right: 0; 
+        margin-right: 0;
     }
 
     p {
@@ -333,7 +334,7 @@ footer {
 @media (max-width: 480px) {
 
     .bar-navegation a {
-        padding: 15px 10px; 
+        padding: 15px 10px;
         font-size: 14px;
     }
 
@@ -362,6 +363,10 @@ footer {
     .skip-2,
     .skip-3 {
         padding: 40px 15px;
+    }
+
+    .btn {
+        margin-top: 16px;
     }
 
     .project-info h3 {
