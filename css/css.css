@@ -286,3 +286,104 @@ footer {
 .github-item-link {
     text-decoration: none;
 }
+
+/* --- 8. MEDIA QUERIES (RESPONSIVIDAD) --- */
+
+/* --- Para Tablets (768px y menos) --- */
+@media (max-width: 768px) {
+
+    /* Hacemos los títulos de sección más pequeños */
+    .heading {
+        font-size: 36px;
+    }
+
+    .skip-1 h2,
+    .skip-2 h2,
+    .skip-3 h2 {
+        font-size: 38px;
+        text-align: center; /* Centramos el título si el texto se rompe */
+    }
+
+    /* Hacemos que la tarjeta de proyecto se apile verticalmente */
+    .project-item {
+        flex-direction: column;
+    }
+
+    .project-info {
+        padding: 30px;
+        text-align: center; /* Centra el texto del proyecto */
+    }
+
+    .project-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .project-links a {
+        margin-right: 0; /* Quitamos el margen que tenía */
+    }
+
+    /* Centramos el botón de submit en el formulario */
+    .btn {
+        align-self: center; /* Lo centramos en lugar de alinearlo a la derecha */
+        width: 90%; /* Hacemos que ocupe el 90% del formulario */
+        text-align: center;
+    }
+
+    /* Evita que el texto toque los bordes */
+    p {
+        width: 90%;
+        max-width: 90%;
+    }
+}
+
+
+/* --- Para Celulares (480px y menos) --- */
+@media (max-width: 480px) {
+
+    /* Hacemos la navegación un poco más compacta */
+    .bar-navegation a {
+        padding: 15px 10px; /* Menos padding horizontal */
+        font-size: 14px;
+    }
+
+    /* Títulos aún más pequeños */
+    .heading {
+        font-size: 28px;
+    }
+
+    .skip-1 h2,
+    .skip-2 h2,
+    .skip-3 h2 {
+        font-size: 30px;
+    }
+
+    /* Apilamos los íconos de skills verticalmente */
+    .skills_row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Hacemos que los inputs del formulario ocupen todo el ancho */
+    .name,
+    .email,
+    .message {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%; /* Botón de submit a todo lo ancho */
+    }
+
+    /* Menos padding en las secciones para ganar espacio */
+    .skip-1,
+    .skip-2,
+    .skip-3 {
+        padding: 40px 15px;
+    }
+
+    .project-info h3 {
+        font-size: 24px;
+    }
+}
