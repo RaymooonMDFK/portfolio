@@ -7,44 +7,52 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/css.css">
     <link rel="shortcut icon" href="img/goat.png" type="imgame.png">
+    <script src="js/lang_loader.js"></script>
 </head>
 
 <body>
     <div class="heading" id="home">
         <div class="heading_line-1">
-            <p>Hola, soy<span> Ray</span>.</p>
+            <div id="heading_1"></div>
+            <span>Ray</span>
         </div>
         <div class="heading_line-2">
-            <p>Soy un aprendiz de desarrollo web.</p>
+            <p id="heading_2">Soy un aprendiz de desarrollo web.</p>
         </div>
         <div class="content_button">
-            <a href="#skip-1" id="home" class="view-content-button">ver mi portafolio</a>
+            <a href="#skip-1" id="portfolio" class="view-content-button">ver mi portafolio</a>
+        </div>
+        <div id="lang_menu">
+            <button id="lang_button_en" class="btn btn-lang">EN</button>
+            <button id="lang_button_es" class="btn btn-lang">ES</button>
+            <button id="lang_button_fr" class="btn btn-lang">FR</button>
         </div>
     </div>
 
     <main>
+
         <div class="bar-navegation">
             <nav>
                 <ul>
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#skip-1">Acerca de mi</a></li>
-                    <li><a href="#skip-2">Proyectos</a></li>
-                    <li><a href="#skip-3">Contacto</a></li>
+                    <li><a href="#home" id="btn-home">Inicio</a></li>
+                    <li><a href="#skip-1" id="btn-about_me">Acerca de mi</a></li>
+                    <li><a href="#skip-2" id="btn-project">Proyectos</a></li>
+                    <li><a href="#skip-3" id="btn-contact">Contacto</a></li>
                 </ul>
             </nav>
         </div>
         <section id="skip-1" class="skip-1">
-            <h2>Acerca de mi</h2>
+            <h2 id="about_me-h2">Acerca de mi</h2>
             <div class="img-container">
                 <figure class="photo-profile">
                     <img src="img/nubini.png" alt="Foto de perfil" width="100px">
                 </figure>
             </div>
-            <p>Totalmente comprometido con la filosofía del aprendizaje autodidacta, soy un desarrollador principiante
-                con una profunda pasión por todo lo relacionado con el desarrollo web. La combinación única de
-                creatividad, lógica, tecnología y la constante búsqueda de nuevas cosas por descubrir impulsa mi
-                entusiasmo y pasión por el desarrollo web. Cuando no estoy frente al ordenador, me gusta dedicar mi
-                tiempo a leer, mantenerme en forma y aprender.</p>
+            <p id="about_me-desc">Totalmente comprometido con la filosofía del aprendizaje autodidacta, soy un
+                desarrollador principiante con una profunda pasión por todo lo relacionado con el desarrollo web. La
+                combinación única de creatividad, lógica, tecnología y la constante búsqueda de nuevas cosas por
+                descubrir impulsa mi entusiasmo y pasión por el desarrollo web. Cuando no estoy frente al ordenador, me
+                gusta dedicar mi tiempo a leer, mantenerme en forma y aprender.</p>
             <div class="skills">
                 <div class="skills_row">
                     <div class="skill_item skill_item-html">
@@ -69,7 +77,7 @@
             </div>
         </section>
         <section id="skip-2" class="skip-2">
-            <h2>Proyectos</h2>
+            <h2 id="project-h2">Proyectos</h2>
             <div class="projects-container">
 
                 <div class="project-item">
@@ -77,23 +85,24 @@
                         <img src="img/project1.jpg" alt="Proyecto 1">
                     </div>
                     <div class="project-info">
-                        <h3>Tabla periodica en linea</h3>
-                        <p>Tabla periodica de los elementos en linea con su respectiva simbologia.</p>
+
+                        <h3 id="name-project-pt">Tabla periodica en linea</h3>
+                        <p id="desc-project-pt">Tabla periodica de los elementos en linea con su respectiva simbologia.
+                        </p>
                         <div class="project-links">
-                            <a href="#">Ver Online</a>
+                            <a href="#" id="btn-online-pt"></a>
                         </div>
                     </div>
                 </div>
-
                 <div class="project-item">
                     <div class="project-image">
                         <img src="img/project2.jpg" alt="Proyecto 2">
                     </div>
                     <div class="project-info">
-                        <h3>Sitio web de una pizzeria falsa</h3>
-                        <p>Un sitio web de una pizzeria falsa para otro proyecto en java.</p>
+                        <h3 id="name-project-pz">Sitio web de una pizzeria falsa</h3>
+                        <p id="desc-project-pz">Un sitio web de una pizzeria falsa para otro proyecto en java.</p>
                         <div class="project-links">
-                            <a href="#">ver Online</a>
+                            <a href="#" id="btn-online-pz"></a>
                         </div>
                     </div>
                 </div>
@@ -101,13 +110,12 @@
             </div>
         </section>
         <section id="skip-3" class="skip-3">
-            <h2>Contacto</h2>
+            <h2 id="contact-h2"></h2>
             <form action="https://formsubmit.co/hectorrmedranoj@gmail.com" method="POST">
-
-                <input type="text" name="name" placeholder="Name" class="name">
-                <input type="email" name="email" placeholder="Email" class="email">
-                <textarea name="message" id="message" placeholder="Message" class="message"></textarea>
-                <input type="submit" value="SUBMIT" class="btn">
+                <input type="text" name="name" placeholder="Name" class="name" id="placeholder-name">
+                <input type="email" name="email" placeholder="Email" class="email" id="placeholder-email">
+                <textarea name="message" id="placeholder-message" placeholder="Message" class="message"></textarea>
+                <input type="submit" value="SUBMIT" class="btn" id="btn-submit">
             </form>
         </section>
     </main>
@@ -121,7 +129,7 @@
                 <img src="img/mail.png" alt="" class="email-item">
             </a>
         </div>
-        <p>Hector Medrano @2025</p>
+        <p id="footer">Hector Medrano @2025</p>
     </footer>
 </body>
 

@@ -1,3 +1,10 @@
+/* ---  ESTILOS GLOBALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif;
     background-color: #121212;
@@ -7,67 +14,25 @@ body {
     min-height: 100vh;
 }
 
+/* ---  TIPOGRAFÍA GENERAL --- */
 span {
     color: #ff5733;
 }
 
-.view-content-button {
-    font-size: 18px;
-    border-color: #ff5733;
-    color: #ff5733;
-    text-decoration: none;
-    padding: 10px 20px;
-    border: 2px solid;
+p {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
 }
 
-.view-content-button:hover {
-    padding: 12px 22px;
-    transition: 0.3s;
-}
-
-footer {
-    background-color: #1e1e1e;
-    text-align: center;
-}
-
-.social {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.github-item,
-.email-item {
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-}
-
-.github-item-link {
-    text-decoration: none;
-}
-
-.heading {
-    height: 100dvh;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    font-size: 48px;
-    gap: 0;
-}
-
-.heading_line-1,
-.heading_line-2 {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
+/* ---  LAYOUT - ENCABEZADO Y NAVEGACIÓN --- */
+.bar-navegation {
+    position: sticky;
+    top: 0;
 }
 
 .bar-navegation ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     background-color: #272727;
     justify-content: right;
@@ -80,38 +45,80 @@ footer {
     color: #fff;
 }
 
-.bar-navegation {
-    position: sticky;
-    top: 0;
-}
-
 .bar-navegation a:hover {
     color: #ff5733;
 }
 
+/* Heading de bienvenida */
+.heading {
+    height: 100dvh;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 48px;
+    gap: 0;
+}
+
+.heading_line-1 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.heading_line-1,
+.heading_line-2 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+/* --- LAYOUT - SECCIONES PRINCIPALES --- */
+
+/* Estilos comunes para todas las secciones */
+.skip-1,
+.skip-2,
+.skip-3 {
+    color: #ffffff;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Fondos específicos para skip 1 y 2 */
+.skip-1,
+.skip-2 {
+    background-color: #1a1a1a;
+}
+
+/* Títulos H2 comunes para todas las secciones */
+.skip-1 h2,
+.skip-2 h2,
+.skip-3 h2 {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    display: inline-block;
+    border-bottom: 5px solid #e11d48;
+    padding-bottom: 5px;
+}
+
+/* ---  CONTENIDO DE SECCIONES --- */
+
+/* Sección "About Me" y "Skills" (Contenido de .skip-1) */
 .photo-profile,
-h2 {
+h2 { /* Nota: Esta regla general afecta a TODOS los h2 */
     text-align: center;
     font-size: 36px;
     margin-top: 40px;
     margin-bottom: 20px;
 }
 
-p {
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-    line-height: 1.6;
-}
-
 .skills {
     max-width: 900px;
     margin: 40px auto;
-}
-
-.img-item {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
 }
 
 .skills_row {
@@ -122,58 +129,13 @@ p {
     align-items: center;
 }
 
-.project1 {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    max-width: 450px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    transition: transform 0.3s;
+.img-item {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
 }
 
-.project1:hover {
-    transform: scale(1.05);
-}
-
-.skip-1 {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding: 60px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.skip-1 h2 {
-    font-size: 48px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-    display: inline-block;
-    border-bottom: 5px solid #e11d48;
-    padding-bottom: 5px;
-}
-
-.skip-2 {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding: 60px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.skip-2 h2 {
-    font-size: 48px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-    display: inline-block;
-    border-bottom: 5px solid #e11d48;
-    padding-bottom: 5px;
-}
-
+/* Sección "Projects" (Contenido de .skip-2) */
 .projects-container {
     width: 100%;
     max-width: 1200px;
@@ -182,7 +144,7 @@ p {
 .project-item {
     display: flex;
     align-items: center;
-    background-color: #4a00e0;
+    background-color: #4a00e0; /* Considera cambiar este color si no encaja */
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 40px;
@@ -233,29 +195,14 @@ p {
     color: #e11d48;
 }
 
+/* Sección "Contact" (Contenido de .skip-3) */
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 40vh;
-}
-
-.skip-3 {
-    color: #ffffff;
-    padding: 60px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.skip-3 h2 {
-    font-size: 48px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-    border-bottom: 5px solid #e11d48;
-    padding-bottom: 5px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .name,
@@ -263,6 +210,7 @@ form {
 .message {
     max-width: 500px;
     width: 90%;
+    width: 100%;
     box-sizing: border-box;
     resize: none;
     border: none;
@@ -277,13 +225,17 @@ form {
     height: 100px;
 }
 
+/* --- COMPONENTES (Botones) --- */
 .btn {
-    margin-left: 440px;
+    align-self: flex-end;
     border: none;
     border-bottom: 2px solid #e11d48;
     background-color: inherit;
     color: #fff;
     transition-duration: 0.3s;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -291,83 +243,45 @@ form {
     color: #121212;
 }
 
-/* --- INICIO DE ESTILOS RESPONSIVOS --- */
-
-/* Para tablets y móviles grandes (menos de 768px) */
-@media (max-width: 768px) {
-    
-    /* 1. Proyectos (para que la imagen y el texto se apilen) */
-    .project-item {
-        flex-direction: column; /* Apila la imagen y la info */
-        text-align: center;
-    }
-    .project-info {
-        padding: 25px;
-    }
-
-    /* 2. Barra de navegación (para centrarla) */
-    .bar-navegation ul {
-        justify-content: center; /* Centra los links de nav */
-    }
-
-    /* 3. Skills (para que se envuelvan) */
-    .skills_row {
-        flex-wrap: wrap; /* Permite que los skills bajen a la siguiente línea */
-    }
+.view-content-button {
+    font-size: 18px;
+    border-color: #ff5733;
+    color: #ff5733;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid;
 }
 
-/* Para móviles (menos de 600px) */
-@media (max-width: 600px) {
-
-    /* 1. Fuentes (reducir tamaños grandes) */
-    .heading {
-        font-size: 36px; /* Reduce el tamaño de fuente principal */
-    }
-    h2, .photo-profile {
-        font-size: 28px; /* Reduce subtítulos */
-    }
-    .skip-1 h2, .skip-2 h2, .skip-3 h2 {
-        font-size: 32px; /* Reduce fuentes de sección */
-    }
-
-    /* 2. Párrafos (para que no se peguen a los bordes) */
-    p {
-        max-width: 100%;
-        padding: 0 15px; /* Añade padding lateral */
-        box-sizing: border-box; /* Importante para que el padding no sume al ancho */
-    }
-
-    /* 3. Arreglos CRÍTICOS de Layout */
-
-    /* Proyecto individual */
-    .project1 {
-        width: 90%; /* Quita el ancho fijo */
-    }
-    .project1:hover {
-        width: 88%; /* Ajusta el hover */
-    }
-
-    /* Formulario de contacto (MUY IMPORTANTE) */
-    .name,
-    .email,
-    .message {
-        width: 90%; /* Quita el ancho fijo de 500px */
-    }
-
-    .btn {
-        margin-left: 0; /* Resetea el margen problemático */
-        width: 90%;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    /* 4. Navegación (para que se apile verticalmente) */
-    .bar-navegation ul {
-        flex-direction: column; 
-        align-items: center;
-    }
-    .bar-navegation a {
-        padding: 10px 0; /* Ajusta el padding vertical */
-    }
+.view-content-button:hover {
+    padding: 12px 22px;
+    transition: 0.3s;
 }
-/* --- FIN DE ESTILOS RESPONSIVOS --- */
+
+.btn-lang {
+    margin: 0;
+}
+
+
+/* ---  LAYOUT - FOOTER --- */
+footer {
+    background-color: #1e1e1e;
+    text-align: center;
+    margin-top: auto;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.github-item,
+.email-item {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+.github-item-link {
+    text-decoration: none;
+}
