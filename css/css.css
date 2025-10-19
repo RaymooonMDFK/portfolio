@@ -162,6 +162,7 @@ h2 { /* Nota: Esta regla general afecta a TODOS los h2 */
 .project-info {
     flex: 1;
     padding: 40px;
+    justify-content: center;
 }
 
 .project-info h3 {
