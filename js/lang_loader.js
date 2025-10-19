@@ -32,18 +32,18 @@ async function find_elements_by_id(id_data) {
         const found_item = document.getElementById(current_key);
 
         if (found_item) {
-            
+
             // --- LÓGICA ACTUALIZADA ---
 
             // 1. Si es un input de tipo "submit"
             if (found_item.tagName === 'INPUT' && found_item.type === 'submit') {
                 found_item.value = id_data[current_key];
-            
-            // 2. Si es cualquier otro input o un textarea
+
+                // 2. Si es cualquier otro input o un textarea
             } else if (found_item.tagName === 'INPUT' || found_item.tagName === 'TEXTAREA') {
                 found_item.placeholder = id_data[current_key];
-            
-            // 3. Para todo lo demás (h2, p, etc.)
+
+                // 3. Para todo lo demás (h2, p, etc.)
             } else {
                 found_item.textContent = id_data[current_key];
             }
@@ -81,5 +81,14 @@ function assign_buttons() {
     });
     boton_fr.addEventListener('touchend', function (event) {
         main('languages/index.json', 'fr');
+    });
+
+    /*Boton portugues */
+    const boton_pt = document.getElementById("lang_button_pt");
+    boton_pt.addEventListener('click', function (event) {
+        main('languages/index.json', 'pt');
+    });
+    boton_pt.addEventListener('touchend', function (event) {
+        main('languages/index.json', 'pt');
     });
 }
