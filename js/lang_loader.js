@@ -33,8 +33,6 @@ async function find_elements_by_id(id_data) {
 
         if (found_item) {
 
-            // --- LÓGICA ACTUALIZADA ---
-
             // 1. Si es un input de tipo "submit"
             if (found_item.tagName === 'INPUT' && found_item.type === 'submit') {
                 found_item.value = id_data[current_key];
@@ -47,7 +45,6 @@ async function find_elements_by_id(id_data) {
             } else {
                 found_item.textContent = id_data[current_key];
             }
-            // --- FIN DE LA LÓGICA ---
 
         } else {
             console.warn(`Advertencia: No se encontró ningún elemento con el id "${current_key}"`);

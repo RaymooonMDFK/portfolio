@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Hector Medrano | Portfolio</title>
     <link rel="stylesheet" href="css/css.css">
     <link rel="shortcut icon" href="img/goat.png" type="imgame.png">
-    <script src="js/lang_loader.js"></script>
+    <script src="./js/lang_loader.js"></script>
+    <script src="./js/responsive_nav_bar.js"></script>
+
 </head>
 
 <body>
@@ -17,10 +19,10 @@
             <span>Ray</span>
         </div>
         <div class="heading_line-2">
-            <p id="heading_2">Soy un aprendiz de desarrollo web.</p>
+            <p id="heading_2"></p>
         </div>
         <div class="content_button">
-            <a href="#skip-1" id="portfolio" class="view-content-button">ver mi portafolio</a>
+            <a href="#skip-1" id="portfolio" class="view-content-button"></a>
         </div>
         <div id="lang_menu">
             <button id="lang_button_en" class="btn btn-lang">EN</button>
@@ -31,29 +33,36 @@
     </div>
 
     <main>
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#skip-1">Acerca de mi</a></li>
+                <li><a href="#skip-2">Proyectos</a></li>
+                <li><a href="#skip-3">Contacto</a></li>
+            </ul>
+        </nav>
 
-        <div class="bar-navegation">
+        <details class="nav-mobile collap-content" id="bar-nav">
+            <summary>Desplazarte</summary>
             <nav>
                 <ul>
-                    <li><a href="#home" id="btn-home">Inicio</a></li>
-                    <li><a href="#skip-1" id="btn-about_me">Acerca de mi</a></li>
-                    <li><a href="#skip-2" id="btn-project">Proyectos</a></li>
-                    <li><a href="#skip-3" id="btn-contact">Contacto</a></li>
+                    <li><a href="home" class="nav-button" id="btn-home">Inicio</a></li>
+                    <li><a href="skip-1" class="nav-button" id="btn-about_me">Acerca de mi</a></li>
+                    <li><a href="skip-2" class="nav-button" id="btn-project">Proyectos</a></li>
+                    <li><a href="skip-3" class="nav-button" id="btn-contact">Contacto</a></li>
                 </ul>
             </nav>
-        </div>
+        </details>
+
         <section id="skip-1" class="skip-1">
+
             <h2 id="about_me-h2">Acerca de mi</h2>
             <div class="img-container">
                 <figure class="photo-profile">
-                    <img src="img/nubini.png" alt="Foto de perfil" width="100px">
+                    <img src="img/nubini.png" alt="Foto de perfil" class="pfp">
                 </figure>
             </div>
-            <p id="about_me-desc">Totalmente comprometido con la filosofía del aprendizaje autodidacta, soy un
-                desarrollador principiante con una profunda pasión por todo lo relacionado con el desarrollo web. La
-                combinación única de creatividad, lógica, tecnología y la constante búsqueda de nuevas cosas por
-                descubrir impulsa mi entusiasmo y pasión por el desarrollo web. Cuando no estoy frente al ordenador, me
-                gusta dedicar mi tiempo a leer, mantenerme en forma y aprender.</p>
+            <p class="about_me" id="about_me-desc"></p>
             <div class="skills">
                 <div class="skills_row">
                     <div class="skill_item skill_item-html">
@@ -76,9 +85,12 @@
                     </div>
                 </div>
             </div>
+            <div class="resume">
+                <a href="downloads/Hrmedrnaoj-resume.pdf" download class="btn" id="download"></a>
+            </div>
         </section>
         <section id="skip-2" class="skip-2">
-            <h2 id="project-h2">Proyectos</h2>
+            <h2 id="project-h2"></h2>
             <div class="projects-container">
 
                 <div class="project-item">
@@ -87,9 +99,8 @@
                     </div>
                     <div class="project-info">
 
-                        <h3 id="name-project-pt">Tabla periodica en linea</h3>
-                        <p id="desc-project-pt">Tabla periodica de los elementos en linea con su respectiva simbologia.
-                        </p>
+                        <h3 id="name-project-pt"></h3>
+                        <p id="desc-project-pt"></p>
                         <div class="project-links">
                             <a href="https://raymooonmdfk.github.io/perdiodicT/" id="btn-online-pt"></a>
                         </div>
@@ -100,8 +111,8 @@
                         <img src="img/project2.jpg" alt="Proyecto 2">
                     </div>
                     <div class="project-info">
-                        <h3 id="name-project-pz">Sitio web de una pizzeria ficticia</h3>
-                        <p id="desc-project-pz">Un sitio web de una pizzeria ficticia para otro proyecto en java.</p>
+                        <h3 id="name-project-pz"></h3>
+                        <p id="desc-project-pz"></p>
                         <div class="project-links">
                             <a href="https://raymooonmdfk.github.io/raybloxpizzeria/" id="btn-online-pz"></a>
                         </div>
@@ -130,7 +141,10 @@
                 <img src="img/mail.png" alt="" class="email-item">
             </a>
         </div>
-        <p id="footer">Hector Medrano @2025</p>
+        <div class="data">
+            <p>Hector Raymundo Medrano Jacobo</p>
+            <p>hectorrmedranoj@gmail.com @2025</p>
+        </div>
     </footer>
 </body>
 

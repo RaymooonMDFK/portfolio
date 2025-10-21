@@ -26,26 +26,76 @@ p {
 }
 
 /* ---  LAYOUT - ENCABEZADO Y NAVEGACIÓN --- */
-.bar-navegation {
+
+/* ======== ESTILOS BASE (ESCRITORIO) ======== */
+/* Por defecto, pensamos en la pantalla grande */
+
+/* 1. Ocultamos el menú móvil (<details>) en escritorio */
+.nav-mobile {
+    display: none;
+}
+
+/* 2. Mostramos y estilizamos el menú de escritorio */
+.nav-desktop {
     position: sticky;
     top: 0;
+    background-color: #1a1a1a;
+    padding: 10px;
+    width: 100%;
 }
 
-.bar-navegation ul {
+.nav-desktop ul {
     list-style: none;
-    display: flex;
-    background-color: #272727;
-    justify-content: right;
+    display: flex;         /* <-- Esto crea la barra horizontal */
+    justify-content: right; /* Alinea los links a la derecha */
+    margin: 0;
+    padding: 0;
 }
 
-.bar-navegation a {
+.nav-desktop a {
     display: block;
     padding: 15px 20px;
     text-decoration: none;
     color: #fff;
 }
 
-.bar-navegation a:hover {
+.nav-desktop a:hover {
+    color: #ff5733;
+}
+
+
+/* ======== ESTILOS PARA EL MENU DE CEL ======== */
+
+.nav-mobile {
+    color: #fff;
+    background-color: #1a1a1a;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+.nav-mobile summary {
+    cursor: pointer;
+    list-style: none;
+    font-size: 1.2em;
+}
+
+.nav-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.nav-mobile a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #272727;
+    border-bottom: 1px solid #444;
+}
+
+.nav-mobile a:hover {
     color: #ff5733;
 }
 
@@ -106,15 +156,24 @@ p {
 }
 
 /* ---  CONTENIDO DE SECCIONES --- */
+.photo-profile{
+    padding-bottom: 50px;
+}
 
-/* Sección "About Me" y "Skills" (Contenido de .skip-1) */
-.photo-profile,
-h2 {
-    /* Nota: Esta regla general afecta a TODOS los h2 */
-    text-align: center;
-    font-size: 36px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+.pfp {
+    /*Foto profesional*/
+    /*width: 350px;
+    margin: auto;
+    border-radius: 100%;
+    box-shadow: 0 0 30px #430707;*/
+    /*Nubini*/
+    filter: drop-shadow(0px 0px 6px #c5a72b);
+    background-color: none;
+}
+
+
+.about_me {
+    text-align: justify;
 }
 
 .skills {
@@ -146,7 +205,6 @@ h2 {
     display: flex;
     align-items: center;
     background-color: #4a00e0;
-    /* Considera cambiar este color si no encaja */
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 40px;
@@ -238,11 +296,23 @@ form {
     padding: 8px 16px;
     font-size: 16px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn:hover {
     background-color: #e11d48;
     color: #121212;
+}
+
+.btn-nav {
+
+    border-bottom-right-radius: 30px;
+    top: 0;
+    position: sticky;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    z-index: 200;
 }
 
 .view-content-button {
@@ -266,9 +336,17 @@ form {
 
 /* ---  LAYOUT - FOOTER --- */
 footer {
+    display: flex;
+    flex-direction: column;
     background-color: #1e1e1e;
-    text-align: center;
+    align-items: center;
     margin-top: auto;
+    padding-bottom: 20px;
+}
+
+.data p {
+    margin: 0;
+    padding: 1px;
 }
 
 .social {
@@ -330,17 +408,26 @@ footer {
     }
 }
 
-/* --- Para Móviles (480px y menos) --- */
+/* --- Para celular (480px y menos) --- */
 @media (max-width: 480px) {
 
     .bar-navegation a {
-        padding: 15px 10px;
+        padding: 20px 10px;
         font-size: 14px;
+    }
+
+    .bar-navegation ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hide_bar_nav {
+        display: none;
     }
 
     .heading {
         font-size: 28px;
-    }
+    }   
 
     .skip-1 h2,
     .skip-2 h2,
@@ -371,5 +458,15 @@ footer {
 
     .project-info h3 {
         font-size: 24px;
+    }
+
+    /* 1. Ocultamos el menú de escritorio */
+    .nav-desktop {
+        display: none;
+    }
+
+    /* 2. Mostramos el menú móvil */
+    .nav-mobile {
+        display: block;
     }
 }
