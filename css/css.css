@@ -35,7 +35,6 @@ p {
     display: none;
 }
 
-/* 2. Mostramos y estilizamos el menú de escritorio */
 .nav-desktop {
     position: sticky;
     top: 0;
@@ -47,9 +46,7 @@ p {
 .nav-desktop ul {
     list-style: none;
     display: flex;
-    /* <-- Esto crea la barra horizontal */
     justify-content: right;
-    /* Alinea los links a la derecha */
     margin: 0;
     padding: 0;
 }
